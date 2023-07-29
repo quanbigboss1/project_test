@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang Web Doanh Nghiệp Bán Điện Thoại</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Nhúng thư viện Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Phần tử chứa biểu tượng tìm kiếm và người dùng -->
+        <div class="search-icon">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-user"></i>
+        </div>
+
+        <nav>
+            <a style="color:black; font: bold; font-weight: bold;">SAMSUNGFAKE</a>
+            <!-- Các liên kết trong thẻ nav -->
+            <a href="#">Trang chủ</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Sản phẩm</a>
+                <div class="dropdown-content">
+                    <div class="category-row">
+                        <div class="category-column">
+                            <span class="category-name">Điện thoại</span>
+                            <ul>
+                                <li style="margin-top: 10px;"><a href="#" class="no-background">Samsung galaxy A73</a></li>
+                                <li><a href="#" class="no-background">Samsung galaxy note 7</a></li>
+                                <li><a href="#" class="no-background">Samsung galaxy A51</a></li>
+                                <li><a href="#" class="no-background">Samsung galaxy Ultra</a></li>
+                                <li><a href="#" class="no-background">Samsung galaxy S5</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-column">
+                            <span class="category-name">TV</span>
+                            <ul>
+                                <li style="margin-top: 10px;"><a href="#" class="no-background">TV Samsung oled 1</a></li>
+                                <li><a href="#" class="no-background">TV Samsung oled 2</a></li>
+                                <li><a href="#" class="no-background">TV Samsung oled 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#">Giới thiệu</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+    </div>
+    <div class="header">
+        <h1>Chào mừng đến với trang web của doanh nghiệp bán điện thoại</h1>
+        <p>Đây là nội dung trang web...</p>
+    </div>
+
+    <script>
+        // JavaScript để xử lý sự kiện khi hover vào danh mục sản phẩm
+        var dropdownContent = document.querySelector(".dropdown-content");
+        var dropdown = document.querySelector(".dropdown");
+
+        dropdown.addEventListener("mouseover", function() {
+            // Hiển thị phần tử chứa nội dung dropdown khi hover vào danh mục sản phẩm hoặc danh mục con
+            dropdownContent.style.display = "block";
+        });
+
+        dropdownContent.addEventListener("mouseout", function(event) {
+            // Ẩn phần tử chứa nội dung dropdown khi chuột rời khỏi cả danh mục sản phẩm và danh mục con
+            var relatedTarget = event.relatedTarget;
+            if (!dropdown.contains(relatedTarget)) {
+                dropdownContent.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
